@@ -88,7 +88,7 @@ function Header() {
                   <div key={item.id}>
                     <div className="header_hamburger_menu_list_line"></div>
                     <a
-                      href={"#" + item.link}
+                      href={item.link}
                       className="header_hamburger_menu_list_item"
                       onClick={() => {
                         setIsOpen((prev) => !prev);
