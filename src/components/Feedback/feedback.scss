@@ -1,0 +1,13 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.feedback {
+    background-color: $extralight_gray;
+    padding: 50px 0 20px;
+}
+
+@media (max-width: 1250px) {
+    .feedback {
+        padding: 30px 0 20px;
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.info {
+    background-color: $extralight_gray;
+    margin-top: 80px;
+    padding: 80px 0;
+    &_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 245px 245px;
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .info {
+        margin-top: 40px;
+        padding: 20px 0;
+        &_items {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            row-gap: 20px;
+        }
+    }
+}

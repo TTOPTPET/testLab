@@ -1,0 +1,15 @@
+.questions {
+    margin-top: 80px;
+}
+
+@media (max-width: 1250px) {
+    .questions {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .questions {
+        margin-top: 30px;
+    }
+}

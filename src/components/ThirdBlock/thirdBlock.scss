@@ -1,0 +1,92 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.thirdBlock {
+    margin: 80px 0;
+    display: flex;
+    gap: 20px;
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: 590px;
+        &_title {
+            @include headline3;
+            color: $black;
+        }
+        &_descr {
+            @include body16;
+            color: $dark_gray;
+        }
+    }
+    &_image {
+        width: 592px;
+        height: 448px;
+        position: relative;
+        &_photo {
+            width: inherit;
+            height: inherit;
+        }
+        &_firstPlan {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            z-index: 40;
+        }
+        &_secondPlan {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            z-index: 10;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .thirdBlock {
+        margin: 50px 0;
+        &_text {
+            width: 350px;
+            &_title {
+                @include headline5;
+            }
+        }
+        &_image {
+            width: 351px;
+            height: 256px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .thirdBlock {
+        flex-direction: column-reverse;
+        &_text {
+            width: 342px;
+            text-align: center;
+            &_title {
+                @include headline5;
+            }
+        }
+        &_image {
+            width: 342px;
+            height: 258px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .thirdBlock {
+        &_text {
+            width: 288px;
+            &_title {
+                @include headline5;
+            }
+        }
+        &_image {
+            width: 288px;
+            height: 218px;
+        }
+    }
+}

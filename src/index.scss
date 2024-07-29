@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "GraphikLCGRegular"; 
+  src: url("./fonts/GraphikLCG-Regular.woff") format("truetype"); 
+  font-style: normal; 
+  font-weight: 500; 
+} 
+
+@font-face {
+  font-family: "GraphikLCGSemibold"; 
+  src: url("./fonts/GraphikLCG-Semibold.woff") format("truetype"); 
+  font-style: normal; 
+  font-weight: 500; 
+} 
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'GraphikLCGRegular';
+}
+
+html {
+  scroll-behavior: smooth;
+ }

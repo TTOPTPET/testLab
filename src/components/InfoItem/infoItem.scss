@@ -1,0 +1,28 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &_title {
+        @include body18bold;
+        color: $black;
+    }
+    &_descr {
+        @include body16;
+        color: $black;
+    }
+}
+
+@media (max-width: 1250px) {
+    .infoItem {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .infoItem {
+        gap: 20px;
+    }
+}

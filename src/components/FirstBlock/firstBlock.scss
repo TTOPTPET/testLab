@@ -1,0 +1,96 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.firstBlock {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_bg {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/mainBG.png) center center/cover no-repeat;
+    }
+    &_layout {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 30;
+        background-color: rgba($primary_blue, .8);
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 40;
+        gap: 90px;
+        &_text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            &_title {
+                @include headline1;
+                color: $white;
+                text-align: center;
+            }
+            &_subtitle {
+                @include body18;
+                color: $white;
+                text-align: center;
+            }
+        }
+        &_button {
+            cursor: pointer;
+            width: 250px;
+            height: 65px;
+            background-color: $light_gray;
+            border-radius: 4px;
+            border: none;
+            @include headline5;
+            color: $black;
+            transition: background-color .3s;
+            z-index: 10;
+            &:hover {
+                background-color: $white;
+                border: 1px solid $mid_gray;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .firstBlock {
+        &_content {
+            gap: 50px;
+            &_text {
+                gap: 5px;
+                &_title {
+                    @include headline3;
+                }
+                &_subtitle {
+                    @include body16;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .firstBlock {
+        &_content {
+            gap: 20px;
+            &_text {
+                width: 300px;
+                gap: 5px;
+                &_title {
+                    @include headline4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.sliderItem {
+    box-sizing: border-box;
+    width: 340px;
+    height: 315px;
+    background-color: $white;
+    box-shadow: 0 5px 20px rgba(#000, .1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    &_header {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            &_name {
+                @include headline6;
+                color: $black;
+            }
+            &_city {
+                @include body12;
+                color: $dark_gray;
+            }
+        }
+    } 
+    &_descr {
+        @include body14;
+        color: $black;
+    }
+}
+
+@media (max-width: 1250px) {
+    .sliderItem {
+        width: 320px;
+    }       
+}
+
+@media (max-width: 768px) {
+    .sliderItem {
+        width: 310px;
+        height: fit-content;
+        margin-bottom: 20px;
+    }       
+}
+
+@media (max-width: 375px) {
+    .sliderItem {
+        width: 260px;
+    }       
+}

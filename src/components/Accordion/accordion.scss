@@ -1,0 +1,104 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.line {
+    width: 1000px;
+    height: 1px;
+    background-color: $light_gray;
+    margin: 0 auto;
+}
+
+.accordion {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+    &_button {
+        width: 100%;
+        background-color: $white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        cursor: pointer;
+        &_title {
+            text-align: left;
+            @include body18bold;
+            color: $black;
+            transition: color .3s;
+        }
+        &_icon {
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            border: 2px solid $black;
+            border-radius: 50%;
+            transition: fill .3s, border .3s, transform .5s;
+            &__active {
+                transform: rotate(45deg);
+            }
+        }
+        &:hover {
+            .accordion_button_title {
+                color: $primary_blue;
+            }
+            .accordion_button_icon {
+                fill: $primary_blue;
+                border: 2px solid $primary_blue;
+            }
+        }
+        
+    }
+    &_descr {
+        transition: height .7s;
+        width: 93%;
+        &_text {
+            @include body18;
+            color: $dark_gray;
+        }
+    }
+    
+}
+
+@media (max-width: 1250px) {
+    .line {
+        width: 727px;
+    }
+    .accordion {
+        width: 727px;
+    }
+}
+
+@media (max-width: 768px) {
+    .line {
+        width: 343px;
+    }
+    .accordion {
+        width: 343px;
+        &_button {
+            padding: 15px 0;
+            &_title {
+                width: 295px;
+            }
+        }
+        &_descr {
+            &_text {
+                @include body16;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .line {
+        width: 288px;
+    }
+    .accordion {
+        width: 288px;
+        &_button {
+            &_title {
+                width: 244px;
+            }
+        }
+    }
+}

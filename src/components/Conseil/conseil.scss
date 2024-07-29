@@ -1,0 +1,26 @@
+.conseil {
+    margin: 80px 0;
+    &_items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1250px) {
+    .conseil {
+        margin: 50px 0;
+        &_items {
+            row-gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .conseil {
+        margin: 50px 0;
+        &_items {
+            row-gap: 30px;
+        }
+    }
+}

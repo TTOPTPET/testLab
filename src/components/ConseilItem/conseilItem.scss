@@ -1,0 +1,51 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.conseilItem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &_image {
+        width: 72px;
+        height: 72px;
+    }
+    &_icon {
+        width: inherit;
+    }
+    &_text {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &_title {
+            @include headline6;
+            color: $black;
+        }
+        &_descr {
+            @include body14;
+            color: $dark_gray;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .conseilItem {
+        flex-direction: row;
+        gap: 20px;
+        &_image {
+            width: 56px;
+            height: 56px;
+        }
+        &_text {
+            width: 270px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .conseilItem {
+        &_text {
+            width: 216px;
+        }
+    }
+}

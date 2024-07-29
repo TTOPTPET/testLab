@@ -1,0 +1,58 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.slider {
+    margin-bottom: 30px;
+    & > div {
+        padding: 0px 20px 20px;
+        margin: 0 50px 20px;
+        overflow: hidden;
+    }
+    &_dots > li > button::before {
+        font-size: 9px !important;
+        color: $primary_blue !important;
+    }   
+    &_button {
+        transition: all .3s;
+        &:hover {
+            fill: $primary_blue;
+        }
+        &_prev {
+            left: 0;
+        }
+        &__next {
+            right: 0;
+            top: 44%;
+            transform: scale(-1, 1)
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .slider {
+        & > div {
+            padding: 0px 20px 20px;
+            margin: 0;
+        }
+    }        
+}
+
+@media (max-width: 768px) {
+    .slider {
+        & > div {
+            width: 342px;
+            padding: 0px 15px 20px;
+        }
+    }        
+}
+
+@media (max-width: 375px) {
+    .slider {
+        & > div {
+            width: 288px;
+            padding: 0px 15px 20px;
+        }
+    }        
+}
